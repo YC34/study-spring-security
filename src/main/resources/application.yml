@@ -1,0 +1,16 @@
+spring:
+  application:
+            name: study
+  thymeleaf:
+    cache: false
+    check-template-location: false
+    enabled: true
+    prefix: "classpath:/templates/"
+    suffix: ".html"
+
+
+# port? test???? fix? port? ???? ?? ?? 0?? ???.
+server:
+  port: 53837
+
+# thymeleaf config
