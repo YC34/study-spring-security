@@ -34,3 +34,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### yml 파일 ignore
+**/main/resources/application.yml
