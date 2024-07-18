@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://118.220.40.170:3306/blog
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: chany
+    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+      # ddl-auto는 개발시에는 테이블이 시작과 종료에서 모두 drop된다.
+      # validate : 운영시에는 이 옵션으로 사용한다.
+server:
+  port: 53837
+

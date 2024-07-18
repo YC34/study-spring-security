@@ -1,11 +1,21 @@
 package com.example.web.model;
 
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Builder;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 
+@Entity
+@Builder
 public class Post {
-    private String postId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID postId;
     private String title;
     private String contents;
     private String author;
@@ -16,7 +26,7 @@ public class Post {
     public Post() {
     }
 
-    public Post(String postId, String title, String contents, String author, LocalDateTime createdAt) {
+    public Post(UUID postId, String title, String contents, String author, LocalDateTime createdAt) {
         this.postId = postId;
         this.title = title;
         this.contents = contents;
@@ -24,13 +34,11 @@ public class Post {
         this.createdAt = createdAt;
     }
 
-
-    // getter and setter
-    public String getPostId() {
+    public UUID getPostId() {
         return postId;
     }
 
-    public void setPostId(String postId) {
+    public void setPostId(UUID postId) {
         this.postId = postId;
     }
 

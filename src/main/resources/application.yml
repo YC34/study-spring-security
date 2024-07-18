@@ -1,22 +1,3 @@
 spring:
-  application:
-            name: study
-  thymeleaf:
-    cache: false
-    check-template-location: false
-    enabled: true
-    prefix: "classpath:/templates/"
-    suffix: ".html"
-#  data:
-#    redis:
-#      port: 6378
-#      host: localhost
-# port? test???? fix? port? ???? ?? ?? 0?? ???.
-server:
-  port: 53837
-
-# JWT configuration
-
-jwt:
-  secret: "a2c165af367b4e391139adfc832410c321f67fd26898de174642a6a1be34b73419582ef3a17e2315a7161897f2c55ae4c33ecea872f800574cddfa2428618569"
-#  expiration: 1000*60*60 # 1 hour
+  profiles:
+    active: dev

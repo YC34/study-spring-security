@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://118.220.40.170:5432/blog
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 12345678@
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+      # ddl-auto는 개발시에는 테이블이 시작과 종료에서 모두 drop된다.
+      # validate : 운영시에는 이 옵션으로 사용한다.
+server:
+  port: 8082
+

@@ -1,0 +1,13 @@
+services:
+  mariadb:
+    image: mariadb
+    container_name: mariadb_server
+    ports:
+      - "3306:3306"
+    volumes:
+      - type: bind
+        source: /Users/chanymac2/DB/mariadb
+        target: /var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: 1234
+    restart: unless-stopped
